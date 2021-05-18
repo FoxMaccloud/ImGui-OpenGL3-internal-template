@@ -18,7 +18,7 @@ void Menu::Initialize()
     menuShow = true;
 
     if (!glfwInit())
-        std::cout << "failed to init!" << std::endl;
+        std::cout << "failed to init!\n");
 
     glsl_version = "#version 130";
 
@@ -34,14 +34,14 @@ void Menu::Initialize()
 
     if (!monitor)
     {
-        std::cout << "Failed to get monitor, defaults to 1080p" << std::endl;
+        fprintf(stderr, "Failed to get monitor!\n");
     }
     window = glfwCreateWindow(width, height, "", NULL, NULL);
 
     if (!window)
     {
         glfwTerminate();
-        std::cout << "failed to create window!" << std::endl;
+        fprintf(stderr, "failed to create window!" << std::endl;
     }
     glfwSetWindowAttrib(window, GLFW_DECORATED, false);
     /* Make the window's context current */
