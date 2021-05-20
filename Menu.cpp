@@ -18,7 +18,7 @@ void Menu::Initialize()
     menuShow = true;
 
     if (!glfwInit())
-        std::cout << "failed to init!\n");
+        fprintf(stderr, "failed to init!\n")
 
     glsl_version = "#version 130";
 
