@@ -41,7 +41,7 @@ void Menu::Initialize()
     if (!window)
     {
         glfwTerminate();
-        fprintf(stderr, "failed to create window!" << std::endl;
+        fprintf(stderr, "failed to create window!\n");
     }
     glfwSetWindowAttrib(window, GLFW_DECORATED, false);
     /* Make the window's context current */
